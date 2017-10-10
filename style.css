@@ -1,0 +1,862 @@
+/*
+Theme Name: sculptart
+Theme URI: http://sculpt-art.com/themes/sculptart
+Author: Alina Rudnik
+Author URI: http://sculpt-art.com/
+Description: sculptart
+Version: 1.1
+License: GNU General Public License
+License URI: license.txt
+
+/* vars */
+
+/* mixins */
+
+.contacts_col {
+  width: 41.45299%;
+  float: left;
+}
+
+.contacts_col .social_icons {
+  margin-top: 8px;
+}
+
+.contacts_col:last-child {
+  margin-bottom: 30px;
+}
+
+.contacts_title {
+  font: bold 14px/1em proxima_nova;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contacts_text {
+  font: 14px/1.2em proxima_nova;
+  margin-bottom: 40px;
+}
+
+.contacts_map {
+  width: 100%;
+  height: 560px;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  .contacts .col-1 {
+    display: none;
+  }
+
+  .contacts h1 {
+    margin-top: 20px;
+  }
+
+  .contacts_col {
+    width: 100%;
+  }
+  .contacts_map {
+    height: 430px;
+  }
+  
+}
+/* vars */
+
+/* mixins */
+
+/*grid*/
+
+.col-1 {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  width: 31.04126%;
+}
+
+.col-2 {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  width: 68.95874%;
+}
+@media screen and (max-width: 700px) {
+  .col-1, .col-2 {
+    width: 100%;
+  }
+  .col-1 + .col-2 {
+    margin-top: 20px;
+  }
+}
+
+/*bread */
+
+.breadcrumbs {
+  font: 14px/1em proxima_nova;
+  color: #bdbec1;
+  float: left;
+}
+
+/* only phones and tablets*/
+
+@media screen and (min-width: 1065px) {
+  .a-under-tablet {
+    display: none !important;
+  }
+}
+@font-face {
+  font-family: 'proxima_nova';
+  src: url("fonts/proximanova-bold-webfont.eot");
+  src: url("fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-bold-webfont.woff2") format("woff2"), url("fonts/proximanova-bold-webfont.woff") format("woff"), url("fonts/proximanova-bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova';
+  src: url("fonts/proximanova-reg-webfont.eot");
+  src: url("fonts/proximanova-reg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-reg-webfont.woff2") format("woff2"), url("../fonts/proximanova-reg-webfont.woff") format("woff"), url("fonts/proximanova-reg-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font: bold 48px/1em proxima_nova;
+  margin-bottom: 30px;
+  color: #231f20;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: proxima_nova;
+  color: #000;
+}
+
+.container {
+  max-width: 1018px;
+  margin: 0 auto;
+}
+html {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #001;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #e46350;
+}
+
+a:active {
+  color: black;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.header {
+  padding: 35px 0 25px;
+}
+
+.header_logo {
+  float: left;
+  width: 12.37721%;
+  margin-right: 14%;
+}
+
+.header_logo SPAN {
+  font: 12px/1em proxima_nova;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+}
+
+.header_logo:hover {
+  color: #000;
+}
+
+.header_logo-icon {
+  width: 108px;
+  height: 20px;
+  display: block;
+}
+
+.header_menu {
+  text-align: right;
+  float: right;
+  width: 68.95874%;
+  margin-top: 17px;
+}
+
+.header_menu LI A {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 17px 12px;
+}
+
+.header_menu LI:last-child A {
+  padding-right: 0;
+}
+
+.header_menu LI:first-child A {
+  padding-left: 0;
+}
+
+.header_menu LI + LI {
+  margin-left: 9px;
+}
+
+.video_bg {
+  width: 100%;
+}
+
+.video_bg.m-no-video {
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 40vw;
+}
+
+.video_bg-video {
+  object-fit: initial;
+  /*position: absolute;
+    top: 0;
+    left: 0;*/
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  background: #000;
+  padding: 18px 40px 55px;
+  color: #fff;
+  width: 100%;
+}
+
+.footer.m-main {
+  margin-top: -5px;
+}
+
+.footer_info {
+  float: right;
+}
+
+.footer_logo {
+  float: left;
+  width: 16%;
+}
+
+.footer_logo .header_logo-icon {
+  width: 108px;
+  height: 20px;
+}
+
+.footer_logo .header_logo-icon path {
+  fill: #fff;
+}
+
+.footer_logo SPAN {
+  font: 12px/1em proxima_nova;
+  display: inline-block;
+  color: #fff;
+}
+
+.footer_contacts {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 35px;
+}
+
+.footer_contacts-header {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer_contacts-text {
+  font-size: 12px;
+  color: #fff;
+}
+
+/*social icons*/
+
+.social_icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social_icons .svg {
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.social_icons A {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.social_icons A:hover {
+  background-color: #000;
+}
+
+.social_icons A:hover .svg path {
+  fill: #fff;
+}
+
+.social_icons A + A {
+  margin-left: 12px;
+}
+
+.social_icons.m-red A {
+  width: 40px;
+  height: 40px;
+}
+
+.social_icons.m-red .svg {
+  width: 30px;
+  height: 23px;
+}
+
+.social_icons.m-red .svg path {
+  fill: #e16351;
+}
+
+.social_icons.m-gray A {
+  background-color: #999999;
+}
+
+.social_icons.m-gray A:hover {
+  background-color: #000;
+}
+
+.social_icons.m-gray .svg path {
+  fill: #fff;
+}
+
+@media screen and (max-width: 1065px) {
+  body {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  body.m-open {
+    left: -100%;
+  }
+
+  .header_mobile {
+    display: block;
+    position: absolute;
+    padding: 10px;
+    right: 0px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .header_mobile .svg {
+    width: 30px;
+    height: 20px;
+  }
+
+  .header_mobile.m-close {
+    z-index: 6;
+  }
+
+  .header_menu {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding: 80px 0 20px;
+    position: fixed;
+    background: #e16351;
+    top: 0;
+    right: -100%;
+    text-align: center;
+    float: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 5;
+  }
+
+  .header_menu.m-open {
+    display: block;
+    right: 0;
+  }
+
+  .header_menu LI {
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+    display: block;
+  }
+
+  .header_menu LI A {
+    color: #fff;
+    font-size: 16px;
+    padding: 17px 12px;
+  }
+
+  .header_menu LI:first-child A {
+    padding-left: 12px;
+  }
+
+  .header_menu LI:last-child A {
+    padding-right: 12px;
+  }
+
+  .header_menu LI:hover {
+    background: #fff;
+  }
+
+  .header_menu LI:hover A {
+    color: #e16351;
+  }
+
+  .header_menu LI {
+    padding: 10px 0;
+  }
+
+  .header_menu LI + LI {
+    margin-left: 0px;
+  }
+
+  .header_menu .social_icons {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1065px) {
+  .container {
+    padding: 0 25px;
+  }
+
+  .header_logo {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .header_mobile .svg {
+    height: 30px;
+  }
+
+  .header_mobile {
+    right: 15px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .header {
+    padding: 13px 0px 10px;
+    -webkit-box-shadow: 0px 3px 6px #e6e6e6;
+    box-shadow: 0px 3px 6px #e6e6e6;
+  }
+
+  .header_logo {
+    margin-right: 0;
+    width: 75%;
+  }
+
+  .header_logo-icon {
+    width: 136px;
+    height: 25px;
+  }
+  .video_bg {
+    height: 500px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .video_bg.m-no-video {
+    height: 500px;
+  }
+
+  .video_bg-video {
+    display: none;
+  }
+
+  .footer {
+    padding: 25px 20px;
+  }
+
+  .footer_logo {
+    width: 45%;
+  }
+
+  .footer_info .social_icons {
+    text-align: right;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .footer_info .footer_contacts {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .footer_contacts-header {
+    font-size: 12px;
+  }
+}
+
+/* vars */
+
+/* mixins */
+
+/* MAIN NEWS */
+
+.news .news_row {
+  overflow: hidden;
+}
+
+.news.m-line .news_row > .col-1:not(:nth-child(3n)) {
+  margin-right: 35px;
+}
+
+.news.m-line .news_block {
+  border-top: 10px solid #000;
+  margin: 20px 0px 45px;
+  color: #231f20;
+  display: block;
+  overflow: hidden;
+  height: 180px;
+  background-image: none !important;
+}
+
+.news.m-line .news_block:hover {
+  border-top-color: #e46350;
+}
+
+.news.m-line .news_block:hover .news_block-title {
+  color: #e46350;
+}
+
+.news.m-line .news_block-date {
+  font: 24px/1.4em proxima_nova;
+}
+
+.news.m-line .news_block-title {
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+  font: 24px/1em proxima_nova;
+  margin-bottom: 40px;
+}
+
+.news.m-line .news_block-annotation {
+  font: 14px/1.2em proxima_nova;
+  max-height: 48px;
+  overflow: hidden;
+}
+
+.news.m-line .news_block-dots {
+  color: #e46350;
+}
+
+.news.m-cube .col-1 {
+  width: 21.611%;
+}
+
+.news.m-cube .news_row > .col-1:not(:nth-child(4n)) {
+  margin-right: 46px;
+}
+
+.news.m-cube .news_block {
+  display: block;
+  border-top: none;
+  /*background-image: url(../images/sculptart_web.jpg);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 195px;
+  position: relative;
+  margin: 20px 0px;
+}
+
+.news.m-cube .news_block:hover .news_block-overlay {
+  height: 100%;
+  background-color: rgba(230, 100, 81, 0.7);
+}
+
+.news.m-cube .news_block-annotation {
+  display: none;
+}
+
+.news.m-cube .news_block-title {
+  font: bold 14px/1.2em proxima_nova;
+  color: #fff;
+  position: absolute;
+  bottom: 28px;
+  left: 10px;
+}
+
+.news.m-cube .news_block-date {
+  position: absolute;
+  right: 11px;
+  bottom: 10px;
+  font: bold 14px/1em proxima_nova;
+  color: #fff;
+}
+
+.news.m-cube .news_block-overlay {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 55px;
+  background-color: rgba(35, 31, 31, 0.7);
+}
+
+.news_switcher {
+  margin-left: 3px;
+}
+
+.news_switcher-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.news_switcher-icon .svg {
+  width: 20px;
+  height: 20px;
+}
+
+.news_switcher-icon .svg path,
+.news_switcher-icon .svg rect {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  fill: #D9D9D8;
+}
+
+.news_switcher-icon.m-active {
+  pointer-events: none;
+}
+
+.news_switcher-icon.m-active .svg path,
+.news_switcher-icon.m-active .svg rect {
+  fill: #000;
+}
+
+.news_switcher-icon:hover .svg path,
+.news_switcher-icon:hover .svg rect {
+  fill: #e16351;
+}
+
+/* one news*/
+
+.news {
+  padding: 55px 0;
+}
+
+.news h1 {
+  margin: 10px 0;
+}
+
+.news_date {
+  font: 14px/1em proxima_nova;
+  color: #939598;
+  margin-bottom: 15px;
+}
+
+.news_text {
+  color: #231f20;
+  font: 14px/1em proxima_nova;
+}
+
+.news_text P + P {
+  margin-top: 20px;
+}
+
+.news_text .m-small {
+  float: left;
+  width: 50%;
+  height: auto;
+  margin: 30px 0 40px;
+}
+
+.news_text .m-big {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin: 30px 0 40px;
+}
+
+/* simple post */
+
+.post {
+  padding: 55px 0;
+}
+
+.post_text {
+  color: #231f20;
+  font: 14px/1em proxima_nova;
+}
+@media screen and (min-width: 701px) and (max-width: 1065px) {
+  .post {
+    padding: 30px 25px;
+  }
+  .news_header {
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .post {
+    padding: 30px 10px;
+  }
+
+  h1 {
+      font-size: 23px;
+  }
+
+  .news_header {
+    padding: 0 10px;
+  }
+
+  .news_switcher-icon + .news_switcher-icon {
+    margin-left: 20px;
+  }
+
+  .news {
+    padding: 30px 0;
+  }
+
+  
+
+  .news .col-1 {
+    width: 100%;
+  }
+
+  .news.m-line .news_row {
+    padding: 0 10px;
+  }
+
+  .news.m-line .news_row > .col-1:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+
+  .news.m-line .news_block {
+    margin: 20px 0px 20px;
+  }
+
+  .news.m-line .news_block-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .news.m-line .news_block-date {
+    font-size: 13px;
+  }
+
+  .news.m-line .news_block-annotation {
+    font-size: 13px;
+  }
+
+  .news.m-cube .col-1 {
+    width: 100%;
+  }
+
+  .news.m-cube .news_row > .col-1:not(:nth-child(4n)) {
+    margin-right: 0px;
+  }
+
+  .news.m-cube .news_block {
+    display: block;
+    border-top: none;
+    background-image: url("../images/sculptart_web.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 195px;
+    position: relative;
+    margin: 20px 0px;
+  }
+
+  .news.m-cube .news_block:hover .news_block-overlay {
+    height: 100%;
+    background-color: rgba(230, 100, 81, 0.6);
+  }
+
+  .news.m-cube .news_block-annotation {
+    display: none;
+  }
+
+  .news.m-cube .news_block-title {
+    font: bold 14px/1.2em proxima_nova;
+    color: #fff;
+    position: absolute;
+    bottom: 28px;
+    left: 10px;
+  }
+
+  .news.m-cube .news_block-date {
+    position: absolute;
+    right: 11px;
+    bottom: 10px;
+    font: bold 14px/1em proxima_nova;
+    color: #fff;
+  }
+
+  .news.m-cube .news_block-overlay {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 55px;
+    background-color: rgba(35, 31, 31, 0.6);
+  }
+}
+.gallery-list {
+  margin-top: 60px;
+}
+
+.gallery-list A {
+  font: bold 18px/1.5em proxima_nova;
+}
